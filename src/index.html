@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- main css -->
+  <link rel="stylesheet" href="../dist/output.css">
+
+  <!-- leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <!-- leaflet js -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+crossorigin=""></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Ip Tracker</title>
+</head>
+
+<body>
+
+    <div class="location-container bg-blue-800 w-full pt-4 flex flex-col gap-8">
+        <h1 class="w-full text-center text-white">IP Address Tracker</h1>
+        <div class="input-container flex w-full justify-center items-center">
+            <input  class= "location-input"type="text" placeholder="Search for any IP address or domain"><span class=" search bg-black w-14  flex justify-center items-center cursor-pointer"><img src="../images/icon-arrow.svg" alt=""></span>
+        </div>
+    </div>
+    <div class="ip-wrapper flex w-full justify-center absolute top-40 ">
+    <div class=" ip-container bg-white pt-2 relative">
+        <div class="ip-contents w-full flex flex-col laptop:flex-row  laptop:items-center items-center gap-3  relative">
+            <div id="contents"class=" w-full h-14 flex flex-col items-center mt-1  laptop:gap-2">
+                <p class="text-black">IP ADDRESS</p>
+                <h1 class="ip-text text-black"></h1>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="contents" class=" w-full h-14 flex flex-col items-center laptop:gap-2" >
+                <p class="text-black">LOCATION</p>
+                <h1 class="location-text text-black"></h1>
+            </div>
+
+            <div class="line"></div>
+
+            <div  id="contents" class=" w-full h-14 flex flex-col items-center laptop:gap-2">
+                <p class="text-black">TIMEZONE</p>
+                <h1 class="timezone-text text-black"></h1>
+            </div>
+            <div class="line"></div>
+
+            <div  id="contents" class=" w-full h-14 flex flex-col items-center laptop:gap-2">
+                <p class="text-black">ISP</p>
+                <h1 class="isp-text text-black"></h1>
+
+
+            </div>
+        </div>
+    </div> 
+    </div>
+    <div class="map-wrapper">
+    <div id="map"></div>
+    </div>
+
+
+<!-- main js -->
+<script src="./index.js"></script>
+</body>
+</html>

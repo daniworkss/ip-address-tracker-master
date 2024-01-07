@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.location-container{
+    height: 300px;
+    background-image: url(../images/pattern-bg-mobile.png);
+    width: 100%;
+    background-size: cover;
+}
+.location-container h1{
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.input-container input{
+    width: 75%;
+    border-radius: 10px 0px 0px 10px;
+    height: 50px;
+    padding-left: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.input-container input:focus{
+    outline: 0px;
+}
+.input-container span{
+    border-radius: 0px 10px 10px 0px;
+    height: 50px;
+}
+.ip-wrapper{
+    width: 100%;
+  
+
+}
+
+.ip-container{
+    width: 70%;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 80px -2.5rem hsl(0, 0%, 59%);
+    z-index: 2;
+}
+.ip-container p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: hsl(0, 0%, 59%);
+}
+/* map */
+
+#map{
+    width: 100%;
+    height: 70vh;
+    /* background-color: aqua; */
+    background-size: cover;
+    z-index: 1;
+}
+.line{
+    display: none;
+}
+@media screen and (min-width:768px) {
+    .location-container{
+        background-image: url(../images/pattern-bg-desktop.png);
+    }
+    .ip-container{
+        height: 280px;
+        padding: 20px auto;
+    }
+}
+@media screen and (min-width:1200px) {
+    .ip-container{
+        height: 150px;
+        margin-top: 2rem;
+        box-shadow:  0px 0px 100px -1rem hsl(0, 0%, 38%);
+        width: 87%;
+        max-width: 1100px;
+
+    }
+    .ip-contents{
+        height: 125px;
+    }
+    .ip-contents h1{
+        font-size: 23px;
+        font-family: 'Rubik' sans-serif;
+        font-weight: 700;
+    }
+    #contents{
+        align-items: flex-start;
+        padding-left: 1.5rem;
+        width: 230px;
+    }
+    .input-container input{
+        max-width: 50%;
+        height: 70px;
+        font-size: 18px;
+        padding-left: 1rem;
+    }
+    .input-container .search{
+        height: 71px;
+        width: 80px;
+        transition: 0.5s;
+
+    }
+    .search:hover{
+        background-color: hsl(0, 0%, 59%);
+        transition: 0.5s;
+    }
+    .line{
+        background-color: hsl(0, 0%, 59%);
+        width: 2px;
+        height: 80px;
+    }
+}
